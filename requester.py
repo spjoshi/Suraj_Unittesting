@@ -55,15 +55,13 @@ def url_to_df(url):
     Takes a URL to a CSV file and returns the contents of the URL as a Pandas DataFrame.
     '''
     pandas_df = pd.read_csv(url)
-    print pandas_df
-    print len(pandas_df.index)
     return pandas_df
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
     # url_to_csv('http://winterolympicsmedals.com/medals.csv', 'test.csv')
     #
-    list_of_urls = ['', 'http://winterolympicsmedals.com/medals.csv', 'http://winterolympicsmedals.com/medals.csv']
-    list_of_fname = ['file1.csv', 'file2.csv', 'file3.csv']
+    # list_of_urls = ['', 'http://winterolympicsmedals.com/medals.csv', 'http://winterolympicsmedals.com/medals.csv']
+    # list_of_fname = ['file1.csv', 'file2.csv', 'file3.csv']
     # list_of_urls = ['http://winterolympicsmedals.com/medals.csv', 'run', 'http://surajprasadjoshi.com',
     #                     'http://winterolympicsmedals.com/medals.csv', 'jump', 'http://surajprasadjoshi.com', ]
     # list_of_fname = ['test41.csv', 'test42.csv', 'test43.csv', 'test44.csv', 'test45.csv', 'test46.csv']
@@ -71,4 +69,4 @@ if __name__ == "__main__":
 
 
 
-    (url_to_df('http://winterolympicsmedals.com/medals.csv'))
+    # (url_to_df('http://winterolympicsmedals.com/medals.csv'))

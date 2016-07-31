@@ -32,8 +32,16 @@ class TestFunThings(unittest.TestCase):
                 os.remove(file)
         # self.assertRaises(urllib2.URLError, batch_url_to_csv, self.list_unparsable, self.filelist1)
         # self.assertRaises(ValueError, batch_url_to_csv, self.list_invalid, self.filelist1 )
-        self.assertRaises(TypeError, batch_url_to_csv, self.list_type)
-        raise RuntimeError
+        # self.assertRaises(RuntimeError, batch_url_to_csv, self.list_type)
+        # raise RuntimeError
+        # with self.assertRaises(RuntimeError):
+        #     batch_url_to_csv(self.list_mixbag, self.filelist_mixbag)
+        try:
+            batch_url_to_csv(self.list_mixbag, self.filelist_mixbag)
+        except TypeError as RuntimeError:
+            raise RuntimeError
+
+
 
     def test_batch_valid_url_number(self):
         for file in os.listdir(os.getcwd()):
