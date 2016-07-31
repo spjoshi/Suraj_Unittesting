@@ -72,11 +72,8 @@ class TestFunThings(unittest.TestCase):
     def test_df_returnsPdDf(self):
         self.assertTrue(type(url_to_df(self.site1)), pd.DataFrame())
 
-'''
-    def test_df_equal_rows(self)
-        var10 = url_to_csv()
-        res = add(3,4)
-        self.assertEqual(res,7)
+    def test_df_equal_rows(self):
+        self.assertEqual(len(url_to_df(self.site4).index),2311)
 
-'''
+
 # python -m unittest discover

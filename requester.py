@@ -55,6 +55,8 @@ def url_to_df(url):
     Takes a URL to a CSV file and returns the contents of the URL as a Pandas DataFrame.
     '''
     pandas_df = pd.read_csv(url)
+    print pandas_df
+    print len(pandas_df.index)
     return pandas_df
 
 if __name__ == "__main__":
@@ -69,4 +71,4 @@ if __name__ == "__main__":
 
 
 
-    # (url_to_df('http://winterolympicsmedals.com/medals.csv'))
+    (url_to_df('http://winterolympicsmedals.com/medals.csv'))
