@@ -45,8 +45,7 @@ def batch_url_to_csv(urls, fnames):
                 file_path = os.path.join(os.getcwd(), fnames[i])
                 filename_list.append(file_path)
         except Exception:
-            print 'Error processing site'
-
+            pass
     # print 'file name is : ',filename_list
     return filename_list
 
