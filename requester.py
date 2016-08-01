@@ -10,12 +10,13 @@ def url_to_csv(url, fname):
     # url = 'http://winterolympicsmedals.com/medals.csv'
 
     response = urllib2.urlopen(url)
-    csv_f = csv.reader(response)
+    csv_f = csv.reader(response, None)
     medals = []
-
+    count = 0
     for row in csv_f:
+        count = count + 1
         medals.append(row[0:20])
-
+    print count
     with open(fname, 'w') as csv_f:
         csv_w = csv.writer(csv_f)
         csv_w.writerows(medals)
@@ -56,8 +57,8 @@ def url_to_df(url):
     pandas_df = pd.read_csv(url)
     return pandas_df
 
-# if __name__ == "__main__":
-    # url_to_csv('http://winterolympicsmedals.com/medals.csv', 'test.csv')
+if __name__ == "__main__":
+    url_to_csv('http://winterolympicsmedals.com/medals.csv', 'test.csv')
     #
     # list_of_urls = ['', 'http://winterolympicsmedals.com/medals.csv', 'http://winterolympicsmedals.com/medals.csv']
     # list_of_fname = ['file1.csv', 'file2.csv', 'file3.csv']
